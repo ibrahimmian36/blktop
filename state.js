@@ -70,7 +70,7 @@ function opKey(op) {
   return "other";
 }
 function push(arr, v, max) { arr.push(v); if (arr.length > max) arr.shift(); }
-function num(v) { return typeof v === "bigint" ? Number(v) : Number(v); }
+function num(v) { return typeof v === "bigint" ? Number(v) : v; }
 
 /* ---- ingest -------------------------------------------------------- */
 export function onEvent(e) {
