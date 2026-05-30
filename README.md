@@ -9,11 +9,14 @@ drawn as a heatmap that rolls across your terminal. It's the iconic eBPF
 latency visualization — the one Brendan Gregg has been drawing for a
 decade — turned into a top-style tool you can leave open while you work.
 
-It's built on [**yeet**](https://github.com/yeet-run/yeet), a runtime that
+It's built on [**yeet**](https://yeet.cx), a runtime that
 makes a kernel-side BPF program, a per-tick render loop, and a JS state
 model feel like one program.
 
-![blktop screenshot placeholder](assets/blktop.png)
+<!-- To record the demo GIF, run `vhs assets/blktop.tape` on a Linux box
+     with yeet installed, then add:
+     ![blktop](assets/blktop.gif)
+     here. -->
 
 ---
 

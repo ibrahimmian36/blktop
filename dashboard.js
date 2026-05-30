@@ -329,6 +329,11 @@ export function clearScreen() {
 }
 
 function smallTerm(C, R) {
-  const msg = `blktop needs ≥ ${MIN_COLS} cols × ${MIN_ROWS} rows · current ${C}×${R}`;
-  return msg + "\n";
+  /* Keep the message itself within the available width. */
+  const lines = [
+    `blktop: terminal too small`,
+    `need ≥ ${MIN_COLS}×${MIN_ROWS}`,
+    `have ${C}×${R}`,
+  ];
+  return lines.map((l) => l.slice(0, Math.max(1, C))).join("\n") + "\n";
 }
